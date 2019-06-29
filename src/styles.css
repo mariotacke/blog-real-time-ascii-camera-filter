@@ -1,0 +1,17 @@
+video#camera-stream {
+  width: 256px;
+  height: 256px;
+  background-color: orange;
+}
+
+canvas#hidden-canvas {
+  width: 256px;
+  height: 256px;
+  display: none;
+}
+
+canvas#output-canvas {
+  width: 256px;
+  height: 256px;
+  background-color: black;
+}
