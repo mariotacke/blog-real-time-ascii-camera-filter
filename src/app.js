@@ -6,8 +6,8 @@ const outputContext = outputCanvas.getContext('2d');
 
 const constraints = {
   video: {
-    width: 256,
-    height: 256,
+    width: 512,
+    height: 512,
   },
 };
 
