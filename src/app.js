@@ -31,6 +31,8 @@ const getAverageRGB = (frame) => {
   };
 };
 
+const charset = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%&()/\\+<>';
+
 const processFrame = () => {
   const fontHeight = 12;
   const { videoWidth: width, videoHeight: height } = video;
@@ -54,10 +56,11 @@ const processFrame = () => {
       for (let x = 0; x < width; x += fontWidth) {
         const frameSection = hiddenContext.getImageData(x, y, fontWidth, fontHeight);
         const { r, g, b } = getAverageRGB(frameSection);
+        const randomCharacter = charset[Math.floor(Math.random() * charset.length)];
 
         outputContext.fillStyle = `rgb(${r},${g},${b})`;
         // outputContext.fillRect(x, y, fontWidth, fontHeight);
-        outputContext.fillText('@', x, y);
+        outputContext.fillText(randomCharacter, x, y);
       }
     }
   }
