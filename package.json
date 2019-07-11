@@ -1,15 +1,19 @@
 {
-  "name": "camera-experiments",
+  "name": "blog-real-time-ascii-camera-filter",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Building a real-time ASCII Camera Filter in plain Javascript.",
+  "homepage": "https://mariotacke.github.io/blog-real-time-ascii-camera-filter",
   "scripts": {
-    "start": "serve src/"
+    "start": "serve src/",
+    "deploy": "gh-pages --dist src"
   },
   "keywords": [],
   "author": "Mario Tacke <tacke.mario@gmail.com>",
   "license": "MIT",
   "dependencies": {
     "serve": "^11.0.2"
+  },
+  "devDependencies": {
+    "gh-pages": "^2.0.1"
   }
 }
